@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DOM Javascript</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[url('UMY.jpg')] bg-cover bg-center min-h-screen flex items-center justify-center py-10">
+  <div class="container bg-white p-8 rounded-xl shadow-2xl border-2 border-blue-800 w-full max-w-lg">
+    <div class="header text-center mb-6">
+      <h3 class="text-3xl font-bold text-blue-800">Pendaftaran Peminatan</h3>
+    </div>
+    <form>
+      <div class="mb-4">
+        <label for="nama" class="block font-semibold text-gray-700">Nama</label>
+        <input type="text" id="nama" placeholder="Nama anda" class="w-full mt-1 px-4 py-2 border border-blue-400 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 bg-blue-50" />
+      </div>
+      <div class="mb-4">
+        <label for="nim" class="block font-semibold text-gray-700">NIM</label>
+        <input type="text" id="nim" placeholder="NIM anda" class="w-full mt-1 px-4 py-2 border border-blue-400 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 bg-blue-50" />
+      </div>
+      <div class="mb-4">
+        <label for="alamat" class="block font-semibold text-gray-700">Alamat</label>
+        <input type="text" id="alamat" placeholder="Alamat anda" class="w-full mt-1 px-4 py-2 border border-blue-400 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 bg-blue-50" />
+      </div>
+
+      <div class="mb-4">
+        <p class="font-semibold text-gray-700">Peminatan pada bidang:</p>
+        <div class="grid grid-cols-2 gap-2 mt-2 text-gray-800">
+          <label><input type="radio" name="pemintan" value="programming" class="mr-2 accent-blue-700"> Programming</label>
+          <label><input type="radio" name="pemintan" value="desain" class="mr-2 accent-blue-700"> Desain</label>
+          <label><input type="radio" name="pemintan" value="jaringan" class="mr-2 accent-blue-700"> Jaringan</label>
+          <label><input type="radio" name="pemintan" value="data" class="mr-2 accent-blue-700"> Data</label>
+        </div>
+      </div>
+
+      <div class="mb-4">
+        <label for="angkatan" class="block font-semibold text-gray-700">Angkatan</label>
+        <select id="angkatan" class="w-full mt-1 px-4 py-2 border border-blue-400 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 bg-blue-50">
+          <option value="2022">2022</option>
+          <option value="2023">2023</option>
+          <option value="2024">2024</option>
+        </select>
+      </div>
+
+      <div class="mb-4">
+        <label for="tanggal" class="block font-semibold text-gray-700">Tanggal Pendaftaran</label>
+        <input type="date" id="tanggal" class="w-full mt-1 px-4 py-2 border border-blue-400 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 bg-blue-50" />
+      </div>
+
+      <div class="mb-6">
+        <label for="alamat_lengkap" class="block font-semibold text-gray-700">Alamat Lengkap</label>
+        <textarea id="alamat_lengkap" placeholder="Tulis alamat mu disini" name="alamat" rows="4" class="w-full mt-1 px-4 py-2 border border-blue-400 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 bg-blue-50"></textarea>
+      </div>
+
+      <div class="flex justify-between">
+        <button type="submit" onclick="kirimData(event)" class="bg-blue-700 text-white px-5 py-2 rounded-md hover:bg-blue-800 transition font-semibold shadow-md">Kirim</button>
+        <button type="button" onclick="resetData()" class="bg-red-500 text-white px-5 py-2 rounded-md hover:bg-red-600 transition font-semibold shadow-md">Reset</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
